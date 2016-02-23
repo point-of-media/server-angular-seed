@@ -34,6 +34,7 @@ app.use(function (req, res, next) {
     }
 });
 
+
 // dir setup - static dirs
 
 app.use(favicon(__dirname + '/public/images/favicon.ico'));
