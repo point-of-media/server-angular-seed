@@ -83,22 +83,12 @@ app.use(function (err, req, res, next) {
     if (global.process.env.NODE_ENV === 'production') {
         return res.status(err.status || 500).json({});
     }
-    if (!config.switches.printGlobalErrorMessages) {
-        return res.status(err.status || 500).json({
-            error: err,
-            message: err.message
-        });
-    }
     res.status(err.status || 500).json({
         error: err,
         message: err.message
     });
     next();
 });
-
-
-
-
 
 
 module.exports = app;
